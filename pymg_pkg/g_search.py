@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 # Python bindings to the Google search engine
 # Copyright (c) 2009-2014, Mario Vilas
 # All rights reserved.
@@ -82,8 +81,8 @@ def get_page(url):
     @raise urllib2.HTTPError: An exception is raised on error.
     """
     request = Request(url)
-    request.add_header('User-Agent',
-                       'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0)')
+    request.add_header("User-Agent",
+                       'Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.0)')
     cookie_jar.add_cookie_header(request)
     response = urlopen(request)
     cookie_jar.extract_cookies(response, request)
